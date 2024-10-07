@@ -185,7 +185,7 @@ const transporter = nodemailer.createTransport({
     const doc = new jsPDF();
   
     // Adding a logo
-    const logoBase64 = getImageBase64('C:/Users/Administrateur/Desktop/material-tailwind-dashboard-react-main/public/img/logo_footer.png');
+    const logoBase64 = getImageBase64('https://topclassgestiontaches.app.genez.io/public/img/logo_footer.png');
     doc.addImage(logoBase64, 'PNG', 10, 13, 37, 27);
   
     // Document Title
