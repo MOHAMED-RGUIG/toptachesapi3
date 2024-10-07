@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
   origin:["https://topclassgestiontaches.app.genez.io"],
-  methods:["POST","GET"],
+  methods:["POST","GET","DELETE","PUT"],
   credentials:true}));
 // Use the auth routes
 app.use('/auth', authRoutes);
