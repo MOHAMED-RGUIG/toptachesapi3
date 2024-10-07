@@ -17,11 +17,14 @@ router.get('/getUserDetails/:USR', async (req, res) => {
     `;
     const result = await request.query(query);
     if (result.recordset.length > 0) {
-      res.status(200).json({
-        success: true,
-        data: result.recordset[0],
-        message: 'User details retrieved successfully'
-      });
+     const user = result.recordset[0];
+            const currentUser = {
+                EMAILUSR: user.EMAILUSR,
+                ID: user.ID,
+                NOMUSR: user.NOMUSR,
+                TELEP: user.TELEP
+            };
+            res.send(currentUser);
     } else {
       res.status(404).json({ success: false, message: 'User not found' });
     }
