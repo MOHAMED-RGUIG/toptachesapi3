@@ -23,11 +23,14 @@ router.post('/login', async (req, res) => {
               VALUES (@USR, GETDATE())
           `;
           await request.query(insertLoginTime);
-          res.status(200).json({
-              success: true,
-              message: 'Login successful',
-              data: result.recordset[0]
-          });
+           const user = result.recordset[0];
+            const currentUser = {
+                EMAILUSR: user.EMAILUSR,
+                ID: user.ID,
+                NOMUSR: user.NOMUSR,
+                TELEP: user.TELEP
+            };
+            res.send(currentUser);
       } else {
           res.status(401).json({ success: false, message: 'Invalid username or password' });
       }
