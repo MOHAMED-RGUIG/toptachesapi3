@@ -9,7 +9,7 @@ router.post('/login', async (req, res) => {
   const { USR, MotDePasse } = req.body;
   try {
       const query = `
-          SELECT USR, NOMUSR, PRNUSR, EMAILUSR, TELEP, MotDePasse, TYPUSR
+          SELECT ID,USR, NOMUSR, PRNUSR, EMAILUSR, TELEP, MotDePasse, TYPUSR
           FROM Users
           WHERE USR = @USR AND MotDePasse = @MotDePasse
       `;
