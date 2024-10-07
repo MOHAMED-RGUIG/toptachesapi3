@@ -24,6 +24,11 @@ router.post('/login', async (req, res) => {
           `;
           await request.query(insertLoginTime);
            const user = result.recordset[0];
+          res.status(200).json({
+              success: true,
+              message: 'Login successful',
+              data: result.recordset[0]
+          });
             const currentUser = {
                 EMAILUSR: user.EMAILUSR,
                 ID: user.ID,
