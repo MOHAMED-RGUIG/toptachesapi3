@@ -11,7 +11,7 @@ router.get('/getUserDetails/:USR', async (req, res) => {
     const request = new sql.Request();
     request.input('USR', sql.NVarChar, USR);
     const query = `
-      SELECT USR, NOMUSR, PRNUSR, EMAILUSR, TELEP, MotDePasse, TYPUSR
+      SELECT *
       FROM Users
       WHERE USR = @USR
     `;
