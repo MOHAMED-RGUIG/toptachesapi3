@@ -1,4 +1,3 @@
-// notification.js
 import express from 'express';
 import sql from '../database.js'; // Adjust the path as needed
 
