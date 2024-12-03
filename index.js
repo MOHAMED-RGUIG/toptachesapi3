@@ -12,12 +12,12 @@ import taskByNumRoutes from './routes/taskbynum.js';
 import deleteTaskRoutes from './routes/deletetask.js'; 
 import notificationRoutes from './routes/notification.js';
 import sendEmailRoutes from './routes/sendemail.js';
-import saveClientDataRoutes from './src/routes/savedataemailing.js'; 
-import editClientDataRoutes from './src/routes/editdataemailing.js';
-import deleteClientDataRoutes from './src/routes/deletedataemailing.js';
-import getallClientDataRoutes from './src/routes/getalldataemailing.js';
-import downloadFileRoutes from './src/routes/downloadfile.js'
-import getClientDataByIDRoutes from './src/routes/getdataemailingbyid.js'
+import saveClientDataRoutes from './routes/savedataemailing.js'; 
+import editClientDataRoutes from './routes/editdataemailing.js';
+import deleteClientDataRoutes from './routes/deletedataemailing.js';
+import getallClientDataRoutes from './routes/getalldataemailing.js';
+import downloadFileRoutes from './routes/downloadfile.js'
+import getClientDataByIDRoutes from './routes/getdataemailingbyid.js'
 
 
 
