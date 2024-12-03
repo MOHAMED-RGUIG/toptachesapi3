@@ -42,7 +42,7 @@ const transporter = nodemailer.createTransport({
         const pdfBuffer = Buffer.from(pdfDoc.output('arraybuffer'));
         const mailOptions = {
           from: 'stg-it@topclass.ma',
-          to: 'si@topclass.ma',
+          to: 'm.chair@topclass.ma',
           subject: `Demande d’Ouverture de Compte Client pour ${clientInfo.companyName}`,
           html: `Bonjour,<br><br>Je vous adresse ci-joint la demande d’ouverture de compte client pour <b>${clientInfo.companyName}</b>, soumise par notre commercial <b>${clientInfo.chargeducompte}</b>. La fiche d’ouverture de compte est remplie et prête à être traitée.<br><br>${
               customText ? `Voici la remarque ajoutée par le commercial :<br>${customText}<br><br>` : ''
@@ -185,7 +185,7 @@ const transporter = nodemailer.createTransport({
     const doc = new jsPDF();
   
     // Adding a logo
-    const logoBase64 = getImageBase64('./logo_footer.png');
+    const logoBase64 = getImageBase64('C:/Users/Administrateur/Desktop/material-tailwind-dashboard-react-main/public/img/logo_footer.png');
     doc.addImage(logoBase64, 'PNG', 10, 13, 37, 27);
   
     // Document Title
