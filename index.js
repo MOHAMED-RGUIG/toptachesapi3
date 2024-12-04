@@ -20,7 +20,7 @@ import downloadFileRoutes from './routes/downloadfile.js'
 import getClientDataByIDRoutes from './routes/getdataemailingbyid.js'
 
 
-const database = require("./database.js");
+
 const app = express();
 app.use(express.json());
 
