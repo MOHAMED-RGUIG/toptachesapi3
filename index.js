@@ -12,7 +12,7 @@ import taskByNumRoutes from './routes/taskbynum.js';
 import deleteTaskRoutes from './routes/deletetask.js'; 
 import notificationRoutes from './routes/notification.js';
 import sendEmailRoutes from './routes/sendemail.js';
-import saveClientDataRoutes from './routes/savedataemailing.js'; 
+//import saveClientDataRoutes from './routes/savedataemailing.js'; 
 import editClientDataRoutes from './routes/editdataemailing.js';
 import deleteClientDataRoutes from './routes/deletedataemailing.js';
 import getallClientDataRoutes from './routes/getalldataemailing.js';
@@ -48,7 +48,7 @@ app.use('/tasks', deleteTaskRoutes);
 
 app.use('/notifications', notificationRoutes);
 app.use('/api', sendEmailRoutes);
-app.use('/saveClientData', saveClientDataRoutes);
+//app.use('/saveClientData', saveClientDataRoutes);
 app.use('/editClientData', editClientDataRoutes);
 app.use('/deleteClientData', deleteClientDataRoutes);
 app.use('/getallClientData', getallClientDataRoutes);
