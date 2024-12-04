@@ -77,7 +77,14 @@ import taskByNumRoutes from './routes/taskbynum.js';
 import deleteTaskRoutes from './routes/deletetask.js'; 
 import notificationRoutes from './routes/notification.js';
 import sendEmailRoutes from './routes/sendemail.js';
-
+//added
+import saveClientDataRoutes from './routes/savedataemailing.js'; 
+import editClientDataRoutes from './routes/editdataemailing.js';
+import deleteClientDataRoutes from './routes/deletedataemailing.js';
+import getallClientDataRoutes from './routes/getalldataemailing.js';
+import downloadFileRoutes from './routes/downloadfile.js'
+import getClientDataByIDRoutes from './routes/getdataemailingbyid.js'
+// fin added
 
 
 const app = express();
@@ -106,6 +113,14 @@ app.use('/tasks', updateTaskRoutes);
 app.use('/tasks', deleteTaskRoutes);    
 
 app.use('/notifications', notificationRoutes);
+//added
+app.use('/saveClientData', saveClientDataRoutes);
+app.use('/editClientData', editClientDataRoutes);
+app.use('/deleteClientData', deleteClientDataRoutes);
+app.use('/getallClientData', getallClientDataRoutes);
+app.use('/downloadOrder', downloadFileRoutes);
+app.use('/getClientDataByID', getClientDataByIDRoutes);
+//fin added
 
 app.use('/api', sendEmailRoutes);
 app.get("/", async (req, res) => {
