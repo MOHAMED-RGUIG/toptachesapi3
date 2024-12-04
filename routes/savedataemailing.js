@@ -1,5 +1,5 @@
 import express from 'express';
-import sql from '../configs/database.js'; // Database configuration
+import sql from '../database.js'; // Database configuration
 import moment from 'moment-timezone'; // Import moment-timezone
 
 const router = express.Router();
